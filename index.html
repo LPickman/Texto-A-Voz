@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Texto a Voz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Conversión de Texto a Voz</h1>
+    <textarea
+      id="texto"
+      rows="4"
+      cols="50"
+      placeholder="Escribe tu texto aquí..."
+    ></textarea>
+    <div>
+      <button onclick="convertirTextoAVoz()">Escuchar</button>
+      <button onclick="convertirTextoAVoz(1.5)">Escuchar Más Rápido</button>
+      <button onclick="convertirTextoAVoz(0.75)">Escuchar Más Lento</button>
+      <button onclick="pausar()">Pausar</button>
+      <button onclick="continuar()">Continuar</button>
+      <button onclick="descargar()">Descargar</button>
+      <br /><br />
+      <input
+        type="range"
+        id="barraProgreso"
+        value="0"
+        min="0"
+        max="100"
+        step="1"
+        style="width: 100%"
+      />
+      <span id="progresoTexto"></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
